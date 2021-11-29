@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""/>
+    <title>Developpeur Web Front-End, Back-End</title>
+</head>
+<body>
+
+        <div class="bouton">
+            <div class="span1"></div>
+            <div class="span2"></div>
+            <div class="span3"></div>
+        </div>
+
+        <nav id="navbar">
+            <a href="#welcome-section">Acceuil</a>
+            <a href="#projects">Travaux</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="tout">
+            <section id="welcome-section">
+                <div class="entete">
+                    <h1>
+                        Developpeur Web Paris-Oujda<br/>
+                                    -<br/>
+                        RHARRABTI Mohamed-Amine
+                    </h1>
+                    <h2>Front-End: HTML-CSS-JAVASCRIPT-REACT</h2>
+                    <h2>Back-End: NODE-EXPRESS-MONGODB</h2>
+
+                    <div class="description">
+                        <h3>Vous avez besoin d'un site pour booster votre visibilité sur internet et vous ramener plus de client</h3>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="projects">
+                <a href="https://captainmoh.github.io/repar/" target="_blank">
+                    <div class="project-tile" id="reparphone">
+                        <div class="text">Site vitrine HTML-CSS</div>
+                    </div>
+                </a>
+    
+                <a href="https://captainmoh.github.io/pierreFeuilleCiseaux/" target="_blank">
+                    <div class="project-tile" id="pierre">
+                        <div class="text">Jeu Pierre Feuille Ciseaux JS</div>
+                    </div>
+                </a>
+    
+                <a href="https://captainmoh.github.io/casseBrick/" target="_blank">
+                    <div class="project-tile" id="casse">
+                        <div class="text">Casse Briques JS</div>
+                    </div>
+                </a>
+    
+                <a href="https://captainmoh.github.io/pong/" target="_blank">
+                    <div class="project-tile" id="pong">
+                        <div class="text">Jeu Pong JS</div>
+                    </div>
+                </a>
+    
+                <a href="https://captainmoh.github.io/" target="_blank">
+                    <div class="project-tile" id="passe">
+                        <div class="text">Générateur de mot de passe JS</div>
+                    </div>
+                </a>
+    
+                <a href="https://captainmoh.github.io/app-meteo/" target="_blank">
+                    <div class="project-tile" id="meteo">
+                        <div class="text">Application Météo HTML-CSS-JS</div>
+                    </div>
+                </a>
+    
+                <a href="https://captainmoh.github.io/react-deploy/" target="_blank">
+                    <div class="project-tile" id="pokedex">
+                        <div class="text">Pokédex React-SASS</div>
+                    </div>
+                </a>
+    
+                <a href="https://captainmoh.github.io/locationCar" target="_blank">
+                    <div class="project-tile" id="car">
+                        <div class="text">Site location HTML-CSS-JS-Node.js</div>
+                    </div>
+                </a>
+    
+                <a href="https://locationcarbackend.herokuapp.com/voiture" target="_blank">
+                    <div class="project-tile" id="back">
+                        <div class="text">Api Node.js-MongoDB-EXPRESS</div>
+                    </div>
+                </a>
+            </section>
+    
+            <section id="contact">
+                <p>Contactez-moi</p>
+                <div class="liens">
+                    <a href="https://github.com/captainMoh" target="_blank">GitHub</a>
+                    <a href="mailto:aichoun026@gmail.com">E-mail</a>
+                    <a href="tel:+212682336429">Télephone</a>
+                </div>
+            </section>
+        </div>
+    
+
+<style>
+    *, ::before, ::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        overflow-x: hidden;
+    }
+
+    a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    #welcome-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(62deg, #32CDCB 0%, hsl(179, 88%, 13%) 100%);
+        color: aliceblue;
+        text-align: center;
+    }
+
+    #welcome-section .entete h1{
+        font-size: xx-large;
+        font-weight: 900;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+
+    .description {
+        margin-top: 50px;
+    }
+
+    .bouton {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 15vw;
+        height: 15vw;
+        background-color: #CD3234;
+        transition: all 1s;
+    }
+
+    .span1, .span2, .span3 {
+        width: 90%;
+        height: 5px;
+        background-color: #1F9190;
+        border-radius: 10px;
+        transition: all 1s;
+    }
+
+    #navbar{
+        position: fixed;
+        width: 100vw;
+        text-align: right;
+        top: 0;
+        left: 0;
+        background-color: #CD3234;
+        padding: 2rem 0rem;
+        box-shadow: 0px 2px 3px blue;
+        z-index: 2;
+    }
+
+    #navbar > a{
+        color: aliceblue;
+        margin-right: 2rem;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    #navbar > a:hover{
+        color: blue;
+    }
+
+    #projects{
+        display: flex;
+        width: 100%;
+        background-color: darkmagenta;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .project-tile{
+        position: relative;
+        height: 250px;
+        width: 30vw;
+        margin: 20px 0;
+        background-color: #1F9190;
+        overflow: hidden;
+    }
+
+    .text {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 30%;
+        bottom: 0;
+        text-align: center;
+        font-size: x-large;
+        padding-top: 20px;
+    }
+
+    #reparphone {
+        background: url("img/reparphone91.png") center/cover;
+    }
+
+    #pierre {
+        background: url("img/pierrePapier.PNG") center/cover;
+    }
+
+    #casse {
+        background: url("img/casseBrick.PNG") center/cover;
+    }
+
+    #pong {
+        background: url("img/pong.PNG") center/cover;
+    }
+
+    #passe {
+        background: url("img/motDePasse.png") center/cover;
+    }
+
+    #meteo {
+        background: url("img/meteo.png") center/cover;
+    }
+
+    #pokedex {
+        background: url("img/pokedexReact.png") center/cover;
+    }
+
+    #car {
+        background: url("img/locationCar.png") center/cover;
+    }
+
+    #back {
+        background: url("img/apiBack.png") center/cover;
+    }
+
+    .project-tile:hover{
+       transform: scale(1.1);
+       transition-duration: 500ms;
+    }
+
+    .cover-project{
+        max-width: 100%;
+        height: auto;
+    }
+
+    #contact{
+        background-color: #32CDCB;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 300;
+        color: azure;
+    }
+
+    .liens{
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem 0rem;
+        flex-wrap: wrap;
+    }
+
+    #contact > .liens > a{
+        color: azure;
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+    }
+
+    #contact > .liens > a:hover{
+        transform: translateY(-5px);
+        transition-duration: 500ms;
+    }
+
+
+    @media(max-width: 800px){
+        .project-tile {
+            width: 90vw;
+        }
+
+        #navbar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 40vw;
+            height: 100%;
+            transform: translateX(-40vw);
+            transition: all 1s;
+        }
+
+        .bouton {
+            display: flex;
+        }
+
+        .liens {
+            font-size: 1.5rem;
+        }
+        
+    }
+
+</style>
+
+<script>
+    const bouton = document.querySelector('.bouton')
+    const navbar = document.getElementById('navbar')
+    const span1 = document.querySelector('.span1')
+    const span2 = document.querySelector('.span2')
+    const span3 = document.querySelector('.span3')
+    const tout = document.querySelector('.tout')
+
+    let play = false;
+    let taille = screen.width;
+
+    if(taille < 800) {
+        bouton.addEventListener('click', () => {
+            if(!play) {
+                bouton.style.transform = 'translateX(41vw)'
+                navbar.style.transform = 'translateX(0)'
+                span2.style.display = 'none'
+                span1.style.transform = 'translateY(3.5vw) rotateZ(45deg)'
+                span3.style.transform = 'translateY(-3.5vw) rotateZ(-45deg)'
+                play = true
+            } else {
+                bouton.style.transform = 'translateX(0)'
+                navbar.style.transform = 'translateX(-40vw)'
+                span2.style.display = 'block'
+                span1.style.transform = 'translateY(0) rotateZ(0)'
+                span3.style.transform = 'translateY(0) rotateZ(-0)'
+                play = false
+            }
+        })
+
+        tout.addEventListener('click', () => {
+            bouton.style.transform = 'translateX(0)'
+            navbar.style.transform = 'translateX(-40vw)'
+            span2.style.display = 'block'
+            span1.style.transform = 'translateY(0) rotateZ(0)'
+            span3.style.transform = 'translateY(0) rotateZ(-0)'
+        })
+    }
+
+
+</script>
+
+</body>
+</html>
