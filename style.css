@@ -1,0 +1,218 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:not(i) {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #99C894;
+    color: aliceblue;
+    text-align: center;
+}
+
+#welcome-section .entete h1{
+    font-size: xx-large;
+    font-weight: 900;
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.description {
+    margin-top: 50px;
+}
+
+.bouton {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 15vw;
+    height: 15vw;
+    background-color: #003D2F;
+    transition: all 1s;
+}
+
+.span1, .span2, .span3 {
+    width: 90%;
+    height: 5px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+#navbar{
+    position: fixed;
+    width: 100vw;
+    text-align: right;
+    top: 0;
+    left: 0;
+    background-color: #003D2F;
+    padding: 2rem 0rem;
+    
+    z-index: 2;
+    border-bottom: 2px solid #31525B;
+}
+
+#navbar > a{
+    color: aliceblue;
+    margin-right: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: all .3s;
+}
+
+#navbar > a:hover{
+    color: blue;
+}
+
+#projects{
+    display: flex;
+    width: 100%;
+    background-color: #99C894;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-tile{
+    position: relative;
+    height: 250px;
+    width: 30vw;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.text {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    text-align: center;
+    font-size: x-large;
+    padding: 20px;
+}
+
+#reparphone {
+    background: url("img/reparphone91.png") center/cover;
+}
+
+#pierre {
+    background: url("img/pierrePapier.PNG") center/cover;
+}
+
+#casse {
+    background: url("img/casseBrick.PNG") center/cover;
+}
+
+#pong {
+    background: url("img/pong.PNG") center/cover;
+}
+
+#passe {
+    background: url("img/motDePasse.png") center/cover;
+}
+
+#meteo {
+    background: url("img/meteo.png") center/cover;
+}
+
+#pokedex {
+    background: url("img/pokedexReact.png") center/cover;
+}
+
+#car {
+    background: url("img/locationCar.png") center/cover;
+}
+
+#back {
+    background: url("img/apiBack.png") center/cover;
+}
+
+.project-tile:hover{
+   transform: scale(1.1);
+   transition-duration: 500ms;
+}
+
+.cover-project{
+    max-width: 100%;
+    height: auto;
+}
+
+#contact{
+    background-color: #003D2F;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    color: azure;
+}
+
+.liens{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0rem;
+    flex-wrap: wrap;
+}
+
+#contact > .liens > a{
+    color: azure;
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+#contact > .liens > a:hover{
+    transform: translateY(-10px);
+    transition-duration: .5s;
+}
+
+
+@media(max-width: 800px){
+    .project-tile {
+        width: 90vw;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 40vw;
+        height: 100%;
+        transform: translateX(-40vw);
+        transition: all 1s;
+    }
+
+    .bouton {
+        display: flex;
+    }
+
+    .text {
+        font-size: larger;
+    }
+
+    .liens {
+        font-size: 1.5rem;
+    }
+    
+}
